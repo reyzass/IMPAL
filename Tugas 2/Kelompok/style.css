@@ -1,0 +1,110 @@
+/* Reset styles for better cross-browser compatibility */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for the USSD menu */
+.ussd-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling the menu list */
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Hidden class to hide the form until it's needed */
+.hidden {
+    display: none;
+}
+
+/* Transfer form styling */
+.transfer-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.transfer-form label {
+    font-size: 14px;
+    color: #333;
+}
+
+.transfer-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.transfer-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.transfer-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Result display */
+.result {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #007BFF;
+}

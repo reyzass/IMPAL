@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISP *858# - Transfer Pulsa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ussd-container">
+        <h1>*858#</h1>
+        <p>Selamat datang di layanan ISP. Silakan pilih menu:</p>
+        
+        <!-- Menu List -->
+        <ul class="menu-list">
+            <li><button onclick="showTransferForm()">1. Transfer Pulsa</button></li>
+            <li><button>2. Beli Paket Data</button></li>
+            <li><button>3. Cek Saldo</button></li>
+            <li><button>4. Hubungi Customer Support</button></li>
+        </ul>
+
+        <!-- Form untuk Transfer Pulsa -->
+        <div id="transfer-form" class="transfer-form hidden">
+            <h3>Transfer Pulsa</h3>
+            <form onsubmit="processTransfer(); return false;">
+                <label for="recipient">Nomor Penerima:</label><br>
+                <input type="text" id="recipient" name="recipient" placeholder="Masukkan nomor tujuan" required><br><br>
+
+                <label for="amount">Jumlah Pulsa:</label><br>
+                <input type="number" id="amount" name="amount" placeholder="Masukkan jumlah pulsa" required><br><br>
+
+                <button type="submit">Kirim Pulsa</button>
+            </form>
+
+            <!-- Result display -->
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the transfer form
+        function showTransferForm() {
+            document.getElementById('transfer-form').classList.remove('hidden');
+        }
+
+        // Function to simulate transfer process
+        function processTransfer() {
+            const recipient = document.getElementById('recipient').value;
+            const amount = document.getElementById('amount').value;
+            document.getElementById('result').textContent = `Pulsa sebesar ${amount} berhasil dikirim ke nomor ${recipient}.`;
+        }
+    </script>
+
+</body>
+</html>
